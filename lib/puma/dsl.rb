@@ -296,6 +296,10 @@ module Puma
     def drain_on_shutdown(which=true)
       @options[:drain_on_shutdown] = which
     end
+          
+    def drain_wait_timeout(seconds)
+      @options[:drain_wait_timeout] = seconds.to_i
+    end
 
     # Set the environment in which the rack's app will run. The value must be
     # a string.
